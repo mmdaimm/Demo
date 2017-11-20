@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "ViewProducts";
+}
+<head>
+    <div class="hidden">
+        @Model Products
+    </div>
+</head>
+<h2>ViewProducts</h2>
+@foreach (var item in Model)
+{
+    <p>@item.P_id</p> 
+    <p>@item.P_name</p>
+}
+
+
