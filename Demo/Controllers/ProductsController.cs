@@ -130,10 +130,12 @@ namespace Demo.Controllers
                 while (dr.Read())
                 {
                     var product = new Products();
-                    product.P_id = dr["id"];
-                    product.P_name = dr["name"];
                     model.Add(product);
                 }
+            }
+            finally
+            {
+                con.Close();
             }
 
             return View();
